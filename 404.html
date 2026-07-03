@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Synspera</title>
+  <script>
+    // GitHub Pages SPA fallback: GitHub serves this 404.html for any unknown
+    // path (e.g. a refresh on a sub-route). Redirect back into the app so the
+    // single-page app boots instead of showing a 404.
+    (function () {
+      var base = '/synspera-demo/';
+      var l = window.location;
+      if (l.pathname.indexOf(base) !== 0) {
+        l.replace(base);
+      } else if (l.pathname !== base) {
+        // Preserve the sub-path in a query param in case deep-link restore is
+        // wired later; today the app just boots at home.
+        var sub = l.pathname.slice(base.length);
+        l.replace(base + '?p=' + encodeURIComponent(sub) + l.hash);
+      }
+    })();
+  </script>
+</head>
+<body>
+  <noscript>Redirecting… <a href="/synspera-demo/">Open Synspera</a>.</noscript>
+</body>
+</html>
