@@ -2,27 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
+  <title>Synspera has moved</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Synspera</title>
-  <script>
-    // GitHub Pages SPA fallback: GitHub serves this 404.html for any unknown
-    // path (e.g. a refresh on a sub-route). Redirect back into the app so the
-    // single-page app boots instead of showing a 404.
-    (function () {
-      var base = '/synspera-demo/';
-      var l = window.location;
-      if (l.pathname.indexOf(base) !== 0) {
-        l.replace(base);
-      } else if (l.pathname !== base) {
-        // Preserve the sub-path in a query param in case deep-link restore is
-        // wired later; today the app just boots at home.
-        var sub = l.pathname.slice(base.length);
-        l.replace(base + '?p=' + encodeURIComponent(sub) + l.hash);
-      }
-    })();
-  </script>
+  <!-- Canonical home is now synspera.pages.dev -->
+  <meta http-equiv="refresh" content="0; url=https://synspera.pages.dev/" />
+  <link rel="canonical" href="https://synspera.pages.dev/" />
+  <script>window.location.replace('https://synspera.pages.dev/');</script>
+  <style>
+    body { background:#100E15; color:#EDEDF2; font-family:system-ui,sans-serif;
+           display:flex; align-items:center; justify-content:center; height:100vh; margin:0; }
+    a { color:#D4AF37; }
+  </style>
 </head>
 <body>
-  <noscript>Redirecting… <a href="/synspera-demo/">Open Synspera</a>.</noscript>
+  <p>Synspera has moved — <a href="https://synspera.pages.dev/">continue to synspera.pages.dev</a></p>
 </body>
 </html>
